@@ -34,6 +34,7 @@ the whole screen.
 ## Layout
 
     descriptor.mod                    mod metadata (read from inside the mod dir)
+    thumbnail.png                     Workshop preview image, must sit in the mod root
     gui/frontend_ingame_menu.gui      overrides game/gui/frontend_ingame_menu.gui
     install.sh                        copies the mod into the Proton prefix
     steam-workshop/                   Workshop listing texts and preview image
