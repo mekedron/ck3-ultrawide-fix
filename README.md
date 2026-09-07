@@ -3,6 +3,11 @@
 Fixes the in-game pause menu (Escape) being cut off vertically on ultrawide /
 super-ultrawide displays such as 5120x1440.
 
+## Where to get
+
+[Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3797535808)
+[Paradox](https://mods.paradoxplaza.com/mods/158317/Any)
+
 ## Cause
 
 `game/gui/frontend_ingame_menu.gui` scales its content with
