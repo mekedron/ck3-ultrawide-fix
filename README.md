@@ -35,6 +35,8 @@ the whole screen.
 
     descriptor.mod                    mod metadata (read from inside the mod dir)
     gui/frontend_ingame_menu.gui      overrides game/gui/frontend_ingame_menu.gui
+    install.sh                        copies the mod into the Proton prefix
+    steam-workshop/                   Workshop listing texts and preview image
 
 ## Installing
 

@@ -1,0 +1,1 @@
+Fixes the pause menu (Esc) being cut off on ultrawide screens. The menu is scaled to fit the screen height instead of covering the width. Identical to vanilla on 16:9. GUI-only, ironman-safe.

@@ -1,0 +1,43 @@
+[h1]Ultrawide Pause Menu Fix[/h1]
+
+The in-game pause menu (Esc) does not fit on the screen on ultrawide and super-ultrawide displays — the logo, the buttons and the version number get cut off at the top and bottom. The main menu is fine; only the pause menu is affected.
+
+[h2]The cause[/h2]
+
+[code]gui/frontend_ingame_menu.gui[/code] scales its content with [b]ScaleToFitElementOutside[/b], which is a "cover" fit: [i]max(width / 1920, height / 1080)[/i].
+
+On a 5120x1440 screen that comes out as [i]max(2.67, 1.33) = 2.67[/i], so the roughly 830px tall menu column is blown up to about 2200px and no longer fits into 1440px of screen height. The wider the display, the worse the overflow.
+
+Every other fullscreen frontend layout in the game — the main menu, the bookmark screen, the barbershop — uses [b]ScaleToFitElementInside[/b] instead. That is exactly why the main menu looks correct and only the pause menu breaks.
+
+[h2]The fix[/h2]
+
+This mod overrides that one file and changes three lines on a single widget:
+
+[list]
+[*]ScaleToFitElementOutside → ScaleToFitElementInside, so the menu is scaled to [i]fit[/i] the screen instead of covering it
+[*]the reference frame is a fixed 1920x1080 box instead of the full screen
+[*]that frame is centered instead of anchored to the left edge
+[/list]
+
+The last two mirror how [code]frontend_main.gui[/code] is built, so the menu column ends up in the same horizontal position as in the main menu rather than hugging the left edge of a very wide screen. The background art is drawn by the window itself and still covers the whole screen.
+
+[h2]Notes[/h2]
+
+[list]
+[*][b]On 16:9 displays the result is identical to vanilla[/b] — both fits produce the same scale factor there, so nothing changes for regular monitors
+[*]GUI-only mod: no gameplay, script or history files are touched, so ironman and achievements are unaffected
+[*]Safe to add or remove at any time, including mid-campaign — it does not touch save games
+[*]Built for CK3 1.19.x. GUI overrides replace the vanilla file wholesale, so if a future patch reworks the pause menu, this mod will need an update
+[/list]
+
+[h2]Compatibility[/h2]
+
+Replaces [code]gui/frontend_ingame_menu.gui[/code] in full. It conflicts only with mods that edit that same file; if you use one, place this mod [b]below[/b] it in the load order to keep the fix, or above it to keep the other mod's changes.
+
+[h2]Source[/h2]
+
+The full source is on GitHub, including the exact change against the vanilla file and an install script for Linux / Proton users:
+[url=https://github.com/mekedron/ck3-ultrawide-fix]github.com/mekedron/ck3-ultrawide-fix[/url]
+
+Issues and pull requests are welcome.
