@@ -4,7 +4,7 @@ The in-game pause menu (Esc) does not fit on the screen on ultrawide and super-u
 
 [h2]The cause[/h2]
 
-[code]gui/frontend_ingame_menu.gui[/code] scales its content with [b]ScaleToFitElementOutside[/b], which is a "cover" fit: [i]max(width / 1920, height / 1080)[/i].
+gui/frontend_ingame_menu.gui scales its content with [b]ScaleToFitElementOutside[/b], which is a "cover" fit: [i]max(width / 1920, height / 1080)[/i].
 
 On a 5120x1440 screen that comes out as [i]max(2.67, 1.33) = 2.67[/i], so the roughly 830px tall menu column is blown up to about 2200px and no longer fits into 1440px of screen height. The wider the display, the worse the overflow.
 
@@ -20,7 +20,7 @@ This mod overrides that one file and changes three lines on a single widget:
 [*]that frame is centered instead of anchored to the left edge
 [/list]
 
-The last two mirror how [code]frontend_main.gui[/code] is built, so the menu column ends up in the same horizontal position as in the main menu rather than hugging the left edge of a very wide screen. The background art is drawn by the window itself and still covers the whole screen.
+The last two mirror how frontend_main.gui is built, so the menu column ends up in the same horizontal position as in the main menu rather than hugging the left edge of a very wide screen. The background art is drawn by the window itself and still covers the whole screen.
 
 [h2]Notes[/h2]
 
@@ -33,7 +33,7 @@ The last two mirror how [code]frontend_main.gui[/code] is built, so the menu col
 
 [h2]Compatibility[/h2]
 
-Replaces [code]gui/frontend_ingame_menu.gui[/code] in full. It conflicts only with mods that edit that same file; if you use one, place this mod [b]below[/b] it in the load order to keep the fix, or above it to keep the other mod's changes.
+Replaces gui/frontend_ingame_menu.gui in full. It conflicts only with mods that edit that same file; if you use one, place this mod [b]below[/b] it in the load order to keep the fix, or above it to keep the other mod's changes.
 
 [h2]Source[/h2]
 
