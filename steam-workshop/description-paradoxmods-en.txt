@@ -25,7 +25,7 @@ NOTES
 - On 16:9 displays the result is identical to vanilla — both fits produce the same scale factor there, so nothing changes for regular monitors
 - GUI-only mod: no gameplay, script or history files are touched, so ironman and achievements are unaffected
 - Safe to add or remove at any time, including mid-campaign — it does not touch save games
-- Built for CK3 1.19.x. GUI overrides replace the vanilla file wholesale, so if a future patch reworks the pause menu, this mod will need an update
+- Built for CK3 1.20.x. GUI overrides replace the vanilla file wholesale, so if a future patch reworks the pause menu, this mod will need an update
 
 COMPATIBILITY
 
