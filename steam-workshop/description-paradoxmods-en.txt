@@ -1,5 +1,9 @@
 Ultrawide Pause Menu Fix
 
+HELP FIX THIS IN THE BASE GAME
+I have asked Paradox to take the ultrawide fixes into the game itself — the code is ready. If this mod helps you, please like the thread or leave a reply, so the developers see how many ultrawide players there are:
+https://forum.paradoxplaza.com/forum/threads/1946916/
+
 The in-game pause menu (Esc) does not fit on the screen on ultrawide and super-ultrawide displays — the logo, the buttons and the version number get cut off at the top and bottom. The main menu is fine; only the pause menu is affected.
 
 THE CAUSE
