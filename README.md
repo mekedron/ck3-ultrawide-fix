@@ -66,6 +66,6 @@ Close the launcher before installing, then start it and enable
 
 ## Game version
 
-Built against 1.20.0.2 (Crozier). GUI overrides fully replace the vanilla file, so
+Built against 1.21.0 (Florin). GUI overrides fully replace the vanilla file, so
 after a game patch re-diff `gui/frontend_ingame_menu.gui` against
 `<steam>/Crusader Kings III/game/gui/frontend_ingame_menu.gui`.
